@@ -1,278 +1,1229 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Sri Krishna Textiles</title>
-        <meta charset="UTF-8">
+<html lang="en">
 
-<!-- SEO-related -->
-<meta name="description" content="Learn HTML Meta Tags and their importance">
-<meta name="keywords" content="HTML, Meta Tags, SEO, Web Development">
+<head>
 
-<!-- Author -->
-<meta name="author" content="John Doe">
+    <meta charset="UTF-8">
 
-<!-- Responsive design -->
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- Auto-refresh every 10 seconds -->
-<meta http-equiv="refresh" content="10">
+    <title>Sri Krishna Textiles</title>
 
-<!-- Open Graph for social media -->
-<meta property="og:title" content="HTML Meta Tags Guide">
-<meta property="og:description" content="A complete guide to HTML meta tags for SEO and social sharing">
-<meta property="og:image" content="https://example.com/image.jpg">
-<meta property="og:url" content="https://example.com/meta-tags-guide">
-        <style>
-            body{
-                background-color:white;
+
+    <!-- ================= SEO ================= -->
+
+    <meta name="description"
+        content="Sri Krishna Textiles - Explore our Party Wear, Lehenga Choli, Traditional Wear and Men's Wear collections.">
+
+    <meta name="keywords"
+        content="Sri Krishna Textiles, textiles, party wear, lehenga choli, traditional wear, men's wear">
+
+    <meta name="author"
+        content="Sri Krishna Textiles">
+
+
+    <!-- ================= OPEN GRAPH ================= -->
+
+    <meta property="og:title"
+        content="Sri Krishna Textiles">
+
+    <meta property="og:description"
+        content="Explore our latest textile collections.">
+
+    <meta property="og:type"
+        content="website">
+
+
+    <style>
+
+        /* =====================================================
+           GLOBAL RESET
+        ===================================================== */
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+
+        html {
+            width: 100%;
+            scroll-behavior: smooth;
+        }
+
+
+        body {
+            width: 100%;
+            min-height: 100vh;
+
+            background-color: white;
+
+            font-family:
+                "Times New Roman",
+                Times,
+                serif;
+
+            overflow-x: hidden;
+        }
+
+
+        img {
+            display: block;
+            max-width: 100%;
+        }
+
+
+        /* =====================================================
+           HEADER
+        ===================================================== */
+
+        #head {
+
+            width: 100%;
+
+            min-height: 80px;
+
+            padding: 15px 5%;
+
+            background-color: rgb(229, 229, 194);
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            gap: 20px;
+
+            flex-wrap: wrap;
+        }
+
+
+        /* Website name */
+
+        #head h1 {
+
+            margin: 0;
+
+            color: rgb(114, 98, 98);
+
+            font-size:
+                clamp(25px, 3.5vw, 40px);
+
+            line-height: 1.2;
+
+            white-space: nowrap;
+        }
+
+
+        /* =====================================================
+           NAVIGATION
+        ===================================================== */
+
+        #nav {
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            gap: 5px;
+
+            flex-wrap: wrap;
+        }
+
+
+        #nav a {
+
+            display: inline-block;
+
+            padding: 10px 14px;
+
+            color: black;
+
+            text-decoration: none;
+
+            font-size:
+                clamp(15px, 1.7vw, 20px);
+
+            border-radius: 5px;
+
+            transition:
+                0.3s ease;
+        }
+
+
+        #nav a:hover {
+
+            color: white;
+
+            background-color:
+                rgb(114, 98, 98);
+
+            transform:
+                translateY(-2px);
+        }
+
+
+        /* =====================================================
+           MAIN WELCOME TITLE
+        ===================================================== */
+
+        #addr {
+
+            width: 100%;
+
+            padding:
+                0 15px;
+
+            margin:
+                50px auto 20px;
+
+            text-align: center;
+
+            font-family:
+                "Times New Roman",
+                Times,
+                serif;
+
+            font-size:
+                clamp(35px, 8vw, 100px);
+
+            line-height: 1.1;
+
+            overflow-wrap: break-word;
+
+            transition:
+                transform 1.5s ease;
+        }
+
+
+        #addr:hover {
+
+            transform:
+                translateY(15px);
+        }
+
+
+        /* =====================================================
+           SUBTITLE
+        ===================================================== */
+
+        #cl {
+
+            width: 100%;
+
+            padding:
+                0 15px;
+
+            margin:
+                10px auto 30px;
+
+            text-align: center;
+
+            font-family:
+                "Times New Roman",
+                Times,
+                serif;
+
+            font-size:
+                clamp(22px, 4vw, 50px);
+
+            line-height: 1.2;
+        }
+
+
+        /* =====================================================
+           SECTION HEADINGS
+        ===================================================== */
+
+        .section-title {
+
+            width: 100%;
+
+            padding:
+                0 10px;
+
+            margin:
+                25px auto 15px;
+
+            text-align: center;
+
+            font-size:
+                clamp(20px, 3vw, 30px);
+
+            line-height: 1.2;
+        }
+
+
+        /* =====================================================
+           HORIZONTAL LINE
+        ===================================================== */
+
+        hr {
+
+            width: 92%;
+
+            max-width: 1400px;
+
+            margin:
+                15px auto;
+
+            border: none;
+
+            border-top:
+                1px solid #999;
+        }
+
+
+        /* =====================================================
+           ALL IMAGE SECTIONS
+
+           Desktop:
+           4 images per row
+        ===================================================== */
+
+        #container,
+        #container1,
+        #container2,
+        .container4 {
+
+            width: 100%;
+
+            max-width: 1450px;
+
+            margin:
+                0 auto;
+
+            padding:
+                15px;
+
+            background-color:
+                floralwhite;
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, minmax(0, 1fr));
+
+            gap: 15px;
+
+            align-items: stretch;
+        }
+
+
+        /* =====================================================
+           IMAGE CARD
+        ===================================================== */
+
+        .ihdr,
+        .ihdr1,
+        .ihdr3,
+        .mensim {
+
+            width: 100%;
+
+            min-width: 0;
+
+            padding: 7px;
+
+            margin: 0;
+
+            background-color:
+                azure;
+
+            border:
+                2px solid transparent;
+
+            border-radius: 8px;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            overflow: hidden;
+
+            transition:
+                0.3s ease;
+        }
+
+
+        /* =====================================================
+           CARD HOVER
+        ===================================================== */
+
+        .ihdr:hover,
+        .ihdr1:hover,
+        .ihdr3:hover,
+        .mensim:hover {
+
+            background-color:
+                silver;
+
+            border:
+                2px solid black;
+
+            transform:
+                translateY(-2px);
+        }
+
+
+        /* =====================================================
+           ALL IMAGES
+
+           IMPORTANT:
+           Images are NOT fixed at 285x400.
+
+           object-fit: contain means:
+           NOTHING gets cut or hidden.
+        ===================================================== */
+
+        .lace,
+        .leh,
+        .trad,
+        .last {
+
+            display: block;
+
+            width: 100%;
+
+            max-width: 100%;
+
+            height: 400px;
+
+            object-fit: contain;
+
+            object-position: center;
+
+            border-radius: 5px;
+
+            background-color: white;
+        }
+
+
+        /* =====================================================
+           CLICKABLE IMAGE LINKS
+        ===================================================== */
+
+        .party,
+        #tradpage,
+        .container4-link {
+
+            display: block;
+
+            width: 100%;
+
+            text-decoration: none;
+
+            color: inherit;
+        }
+
+
+        /* =====================================================
+           BOTTOM MESSAGE
+        ===================================================== */
+
+        #cmt {
+
+            width: 100%;
+
+            padding:
+                0 15px;
+
+            margin:
+                25px auto 40px;
+
+            text-align: center;
+
+            font-size:
+                clamp(16px, 2vw, 22px);
+        }
+
+
+        /* =====================================================
+           TABLET
+
+           601px - 1000px
+
+           2 images per row
+        ===================================================== */
+
+        @media (max-width: 1000px) {
+
+
+            /* Header */
+
+            #head {
+
+                justify-content: center;
+
+                text-align: center;
             }
-            #head{
-                background-color:rgb(229, 229, 194);
-                display:flex;
-                h1{
-                    color:rgb(114, 98, 98);
-                }
-                #navit1{
-                    display:flex;
-                    padding-left:350px;
-                    padding-top:30px;
-                    padding-bottom:30px;
-                    position:relative;
-                    font-size:20px;
-                }
-                #navit2{
-                    display:flex;
-                    align-items:center;
-                    padding-left:30px;
-                    padding-top:30px;
-                    padding-bottom:30px;
-                    position:relative;
-                    font-size:20px;
-                }
-                #navit3{
-                    display:flex;
-                    align-items:flex-start;
-                    padding-left:30px;
-                    padding-top:30px;
-                    padding-bottom:30px;
-                    position:relative;
-                    font-size:20px;
-                }
-            }
-                #addr{
-                    text-align:center;
-                    font-family: times new roaman;
-                    font-size:100px;
-                    motion:2s;
-                }
-                #addr:hover{
-                    transform: translateY(20px);
-                    transition:1.5s;
-                }
-                #cl{
-                    text-align:center;
-                    font-family: times new roaman;
-                    font-size:50px;
-                }
-                #container{
-                    border:12px;
-                    padding:15px;
-                    background-color:floralwhite;
-                    display:flex;
-                    align-items:center;
-                }
-                .ihdr{
-                    border-width:100px;
-                    background-color:azure;
-                    border:floralwhite;
-                    border-radius:2%;
-                    padding:7px;
-                    margin:2px;
-                    align-items:center;
-                }
-                .ihdr:hover{
-                        background-color:silver;
-                        border:2px solid black;
-                        transition:0.3s;
-                    }
-                    .lace{
-                        height:400px;
-                        width:285px;
-                    }
-                #subs{
-                    text-align:center;
-                }
-                #container1{
-                    border:12px;
-                    padding:15px;
-                    background-color:floralwhite;
-                    display:flex;
-                    align-items:center;
-                    size:1000px;
-                }
-                #lehtit{
-                    text-align:center;
-                }
-                .ihdr1{
-                    border-radius:2%;
-                    padding:7px;
-                    margin:2px;
-                    background-color:azure;
-                    border:floralwhite;
-                }
-                .ihdr1:hover{
-                    background-color:silver;
-                    border:2px solid black;
-                    transition:0.3s;
-                }
-                .leh{
-                    height:400px;
-                    width:285px;
-                }
-                #container2{
-                    border:12px;
-                    padding:15px;
-                    background-color:floralwhite;
-                    display:flex;
-                    align-items:center;
-                }
-                .ihdr3{
-                    border-radius:2%;
-                    padding:7px;
-                    margin:2px;
-                    background-color:azure;
-                    border:floralwhite;
-                }
-                .ihdr3:hover{
-                    background-color:silver;
-                    border:2px solid black;
-                    transition:0.3s;
-                }
-                .trad{
-                    height:400px;
-                    width:285px;
-                }
-                #h3{
-                    text-align:center;
-                }
-                .container4{
-                    display:flex;
-                    align-items:center;
-                    background-color:floralwhite;
-                }
-                .mensim{
-                    border-radius:2%;
-                    padding:7px;
-                    margin:5px;
-                }
-                .mensim:hover{
-                    background-color:silver;
-                    border:2px solid black;
 
-                }
-                .last{
-                    height:400px;
-                    width:285px;
-                }
-                #cmt{
-                    text-align:center;
-                }
-        </style>
-    </head>
-    <body>
-        <div id="head">
-           <strong>
-             <h1>Sri Krishna Textiles</h1>
-             </strong>
-                <a id="navit1" href="index.html">Home</a>
-                <a id="navit2" href="about-page.html">About us</a>
-                <a id="navit3" href="https://wa.me/918946099340" target ="I visited your website, would like to explore more ">Contact us</a>
-        </div>
-        <h1 id="addr">WELCOME TO OUR PAGE</h1>
-        <h3 id="cl">
-            The collections we have
-        </h3>
-        <hr>
-        <h3 id="subs">PARTY WEAR</h3>
-        <hr>
-        <a class="party wmn page" href="party-wear-women.html">
-        <div id="container">
-             <div class="ihdr">
-                <img class="lace" src="party 2c.jpg">
-                </div>
-                <div class="ihdr">
-                <img class="lace" src="party 3c.jpg">
-                </div>
-                <div class="ihdr">
-                <img class="lace"  src="party 4c.jpg">
-                </div>
-                <div class="ihdr">
-                    <img class="lace" src="lace 1c.jpg">
-                </div>
-            </div>
-        </a>
-            <br>
-            <hr>
-            <h3 id="lehtit">
-                LEHENGA CHOLI
-            </h3>
-            <hr>
-            <a class="party wmnn page" href="party-wear-women.html">
-            <div id="container1">
-                <div class="ihdr1">
-                    <img class="leh" src="lehe cht1.jpg" alt="lehenga img">
-                </div>
-                <div class="ihdr1">
-                    <img class="leh" src="lehe cht2.jpg" alt="lehenga img">
-                </div>
-                <div class="ihdr1">
-                    <img class="leh" src="leh cht 3.jpg" alt="lehenga img">
-                </div>
-                <div class="ihdr1">
-                    <img class="leh" src="leh cht 4.jpg" alt="lehenga img">
-                </div>
-            </div>
+
+            #head h1 {
+
+                width: 100%;
+
+                text-align: center;
+            }
+
+
+            /* Navigation */
+
+            #nav {
+
+                width: 100%;
+            }
+
+
+            /* Two images per row */
+
+            #container,
+            #container1,
+            #container2,
+            .container4 {
+
+                grid-template-columns:
+                    repeat(2, minmax(0, 1fr));
+
+                padding:
+                    12px;
+
+                gap:
+                    12px;
+            }
+
+
+            .lace,
+            .leh,
+            .trad,
+            .last {
+
+                height: 380px;
+            }
+        }
+
+
+        /* =====================================================
+           MOBILE
+
+           600px and below
+
+           1 image per row
+        ===================================================== */
+
+        @media (max-width: 600px) {
+
+
+            /* ---------------------------------------------
+               HEADER
+            --------------------------------------------- */
+
+            #head {
+
+                width: 100%;
+
+                min-height: auto;
+
+                padding:
+                    15px 10px;
+
+                flex-direction: column;
+
+                justify-content: center;
+
+                align-items: center;
+
+                gap: 8px;
+            }
+
+
+            #head h1 {
+
+                width: 100%;
+
+                font-size: 27px;
+
+                text-align: center;
+
+                white-space: normal;
+            }
+
+
+            /* ---------------------------------------------
+               NAVIGATION
+            --------------------------------------------- */
+
+            #nav {
+
+                width: 100%;
+
+                display: flex;
+
+                justify-content: center;
+
+                align-items: center;
+
+                gap: 2px;
+            }
+
+
+            #nav a {
+
+                padding:
+                    7px 9px;
+
+                font-size: 15px;
+            }
+
+
+            /* ---------------------------------------------
+               MAIN TITLE
+            --------------------------------------------- */
+
+            #addr {
+
+                margin-top:
+                    30px;
+
+                padding:
+                    0 10px;
+
+                font-size:
+                    clamp(30px, 10vw, 55px);
+            }
+
+
+            #cl {
+
+                padding:
+                    0 10px;
+
+                margin-bottom:
+                    25px;
+
+                font-size: 22px;
+            }
+
+
+            /* ---------------------------------------------
+               SECTION TITLES
+            --------------------------------------------- */
+
+            .section-title {
+
+                margin:
+                    20px auto 12px;
+
+                font-size: 21px;
+            }
+
+
+            hr {
+
+                width: 90%;
+
+                margin:
+                    12px auto;
+            }
+
+
+            /* ---------------------------------------------
+               IMAGE CONTAINERS
+
+               ONE IMAGE PER ROW
+            --------------------------------------------- */
+
+            #container,
+            #container1,
+            #container2,
+            .container4 {
+
+                width: 100%;
+
+                grid-template-columns:
+                    1fr;
+
+                padding:
+                    10px;
+
+                gap:
+                    12px;
+            }
+
+
+            /* ---------------------------------------------
+               IMAGE CARDS
+            --------------------------------------------- */
+
+            .ihdr,
+            .ihdr1,
+            .ihdr3,
+            .mensim {
+
+                width: 100%;
+
+                padding:
+                    7px;
+            }
+
+
+            /* ---------------------------------------------
+               IMAGES
+
+               Full image remains visible.
+            --------------------------------------------- */
+
+            .lace,
+            .leh,
+            .trad,
+            .last {
+
+                width: 100%;
+
+                max-width: 350px;
+
+                height: auto;
+
+                max-height: 500px;
+
+                margin:
+                    0 auto;
+
+                object-fit: contain;
+
+                object-position: center;
+            }
+
+
+            /* ---------------------------------------------
+               BOTTOM TEXT
+            --------------------------------------------- */
+
+            #cmt {
+
+                font-size: 16px;
+
+                margin-bottom:
+                    30px;
+            }
+        }
+
+
+        /* =====================================================
+           SMALL MOBILE
+
+           380px and below
+        ===================================================== */
+
+        @media (max-width: 380px) {
+
+
+            #head {
+
+                padding:
+                    12px 8px;
+            }
+
+
+            #head h1 {
+
+                font-size: 23px;
+            }
+
+
+            #nav {
+
+                gap: 0;
+            }
+
+
+            #nav a {
+
+                padding:
+                    6px 7px;
+
+                font-size: 14px;
+            }
+
+
+            #addr {
+
+                font-size: 30px;
+
+                margin-top:
+                    25px;
+            }
+
+
+            #cl {
+
+                font-size: 19px;
+            }
+
+
+            .section-title {
+
+                font-size: 19px;
+            }
+
+
+            #container,
+            #container1,
+            #container2,
+            .container4 {
+
+                padding:
+                    8px;
+
+                gap:
+                    10px;
+            }
+
+
+            .lace,
+            .leh,
+            .trad,
+            .last {
+
+                max-width:
+                    280px;
+
+                max-height:
+                    450px;
+            }
+        }
+
+
+        /* =====================================================
+           VERY SMALL PHONE
+
+           320px and below
+        ===================================================== */
+
+        @media (max-width: 320px) {
+
+
+            #head h1 {
+
+                font-size: 21px;
+            }
+
+
+            #nav a {
+
+                font-size: 13px;
+
+                padding:
+                    5px 6px;
+            }
+
+
+            #addr {
+
+                font-size: 27px;
+            }
+
+
+            #cl {
+
+                font-size: 18px;
+            }
+
+
+            #container,
+            #container1,
+            #container2,
+            .container4 {
+
+                padding:
+                    6px;
+            }
+
+
+            .lace,
+            .leh,
+            .trad,
+            .last {
+
+                max-width:
+                    250px;
+            }
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         HEADER
+    ===================================================== -->
+
+    <header id="head">
+
+
+        <h1>
+            Sri Krishna Textiles
+        </h1>
+
+
+        <nav id="nav">
+
+
+            <a
+                href="index.html">
+
+                Home
+
             </a>
-            <br>
-            <hr>
-            <h3 id="subs">TRADITIONAL WEAR</h3>
-            <hr>
-            <a id="tradpage" href="traditional-wear.html">
-            <div id="container2">
-                <div class="ihdr1">
-                    <img class="trad" src="trad 1.jpg" alt="traditional wear img">
-                </div>
-                <div class="ihdr1">
-                    <img class="trad" src="trad 2.jpg" alt="traditional wear img">
-                    </div>
-                    <div class="ihdr1">
-                        <img class="trad" src="trad 3.jpg" alt="traditional wear img">
-                     </div>
-                         <div class="ihdr1">
-                         <img class="trad" src="trad 4.jpg" alt="traditional wear img">
-                     </div>
-                 </div> 
-    </a>
-        <br>
-        <hr>
-        <h3 id="subs">MENS WEAR</h3>
-        <hr>
-        <a href="mens-wear.html">
-        <div class="container4">
-            <div class="mensim">
-                <img class="last" src="formal short 1.jpg">
+
+
+            <a
+                href="about-page.html">
+
+                About us
+
+            </a>
+
+
+            <a
+                href="https://wa.me/918946099340"
+                target="_blank"
+                rel="noopener noreferrer">
+
+                Contact us
+
+            </a>
+
+
+        </nav>
+
+
+    </header>
+
+
+
+    <!-- =====================================================
+         WELCOME
+    ===================================================== -->
+
+    <h1 id="addr">
+        WELCOME TO OUR PAGE
+    </h1>
+
+
+    <h3 id="cl">
+        The collections we have
+    </h3>
+
+
+    <!-- =====================================================
+         PARTY WEAR
+    ===================================================== -->
+
+    <hr>
+
+
+    <h3 class="section-title">
+        PARTY WEAR
+    </h3>
+
+
+    <hr>
+
+
+    <a
+        class="party"
+        href="party-wear-women.html">
+
+
+        <div id="container">
+
+
+            <div class="ihdr">
+
+                <img
+                    class="lace"
+                    src="party 2c.jpg"
+                    alt="Party Wear Collection">
+
             </div>
-            <div class="mensim">
-                <img class="last" src="casual 1.jpg">
+
+
+            <div class="ihdr">
+
+                <img
+                    class="lace"
+                    src="party 3c.jpg"
+                    alt="Party Wear Collection">
+
             </div>
-            <div class="mensim">
-                <img class="last" src="tshirt 3.jpg">
+
+
+            <div class="ihdr">
+
+                <img
+                    class="lace"
+                    src="party 4c.jpg"
+                    alt="Party Wear Collection">
+
             </div>
-            <div class="mensim">
-                <img class="last" src="formal shirt 4.jpg">
+
+
+            <div class="ihdr">
+
+                <img
+                    class="lace"
+                    src="lace 1c.jpg"
+                    alt="Party Wear Collection">
+
             </div>
+
+
         </div>
-        </a>
-        <h3 id="cmt">click on the image to explore more</h3>
-    </body>
+
+
+    </a>
+
+
+
+    <!-- =====================================================
+         LEHENGA CHOLI
+    ===================================================== -->
+
+    <br>
+
+
+    <hr>
+
+
+    <h3 class="section-title">
+        LEHENGA CHOLI
+    </h3>
+
+
+    <hr>
+
+
+    <a
+        class="party"
+        href="party-wear-women.html">
+
+
+        <div id="container1">
+
+
+            <div class="ihdr1">
+
+                <img
+                    class="leh"
+                    src="lehe cht1.jpg"
+                    alt="Lehenga Choli">
+
+            </div>
+
+
+            <div class="ihdr1">
+
+                <img
+                    class="leh"
+                    src="lehe cht2.jpg"
+                    alt="Lehenga Choli">
+
+            </div>
+
+
+            <div class="ihdr1">
+
+                <img
+                    class="leh"
+                    src="leh cht 3.jpg"
+                    alt="Lehenga Choli">
+
+            </div>
+
+
+            <div class="ihdr1">
+
+                <img
+                    class="leh"
+                    src="leh cht 4.jpg"
+                    alt="Lehenga Choli">
+
+            </div>
+
+
+        </div>
+
+
+    </a>
+
+
+
+    <!-- =====================================================
+         TRADITIONAL WEAR
+    ===================================================== -->
+
+    <br>
+
+
+    <hr>
+
+
+    <h3 class="section-title">
+        TRADITIONAL WEAR
+    </h3>
+
+
+    <hr>
+
+
+    <a
+        id="tradpage"
+        href="traditional-wear.html">
+
+
+        <div id="container2">
+
+
+            <div class="ihdr3">
+
+                <img
+                    class="trad"
+                    src="trad 1.jpg"
+                    alt="Traditional Wear">
+
+            </div>
+
+
+            <div class="ihdr3">
+
+                <img
+                    class="trad"
+                    src="trad 2.jpg"
+                    alt="Traditional Wear">
+
+            </div>
+
+
+            <div class="ihdr3">
+
+                <img
+                    class="trad"
+                    src="trad 3.jpg"
+                    alt="Traditional Wear">
+
+            </div>
+
+
+            <div class="ihdr3">
+
+                <img
+                    class="trad"
+                    src="trad 4.jpg"
+                    alt="Traditional Wear">
+
+            </div>
+
+
+        </div>
+
+
+    </a>
+
+
+
+    <!-- =====================================================
+         MEN'S WEAR
+    ===================================================== -->
+
+    <br>
+
+
+    <hr>
+
+
+    <h3 class="section-title">
+        MENS WEAR
+    </h3>
+
+
+    <hr>
+
+
+    <a
+        class="container4-link"
+        href="mens-wear.html">
+
+
+        <div class="container4">
+
+
+            <div class="mensim">
+
+                <img
+                    class="last"
+                    src="formal short 1.jpg"
+                    alt="Men's Formal Wear">
+
+            </div>
+
+
+            <div class="mensim">
+
+                <img
+                    class="last"
+                    src="casual 1.jpg"
+                    alt="Men's Casual Wear">
+
+            </div>
+
+
+            <div class="mensim">
+
+                <img
+                    class="last"
+                    src="tshirt 3.jpg"
+                    alt="Men's T-Shirt">
+
+            </div>
+
+
+            <div class="mensim">
+
+                <img
+                    class="last"
+                    src="formal shirt 4.jpg"
+                    alt="Men's Formal Shirt">
+
+            </div>
+
+
+        </div>
+
+
+    </a>
+
+
+
+    <!-- =====================================================
+         BOTTOM MESSAGE
+    ===================================================== -->
+
+    <h3 id="cmt">
+        Click on the image to explore more
+    </h3>
+
+
+</body>
+
 </html>

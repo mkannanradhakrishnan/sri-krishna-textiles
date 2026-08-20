@@ -1,252 +1,1071 @@
-<!DOCTYPE Html>
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-    <title> MENS WEAR</title>
+
     <meta charset="UTF-8">
 
-<!-- SEO-related -->
-<meta name="description" content="Learn HTML Meta Tags and their importance">
-<meta name="keywords" content="HTML, Meta Tags, SEO, Web Development">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- Author -->
-<meta name="author" content="John Doe">
+    <title>Men's Wear | Sri Krishna Textiles</title>
 
-<!-- Responsive design -->
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Explore men's formal shirts, casual wear, hoodies and T-shirts at Sri Krishna Textiles.">
 
-<!-- Auto-refresh every 10 seconds -->
-<meta http-equiv="refresh" content="10">
+    <meta name="keywords"
+        content="Sri Krishna Textiles, men's wear, formal shirts, casual shirts, hoodies, t-shirts">
 
-<!-- Open Graph for social media -->
-<meta property="og:title" content="HTML Meta Tags Guide">
-<meta property="og:description" content="A complete guide to HTML meta tags for SEO and social sharing">
-<meta property="og:image" content="https://example.com/image.jpg">
-<meta property="og:url" content="https://example.com/meta-tags-guide">
-<style>
-    #header{
-        background-color:rgb(229, 229, 194);
-        display:flex;
-    }
-    #pagename{
-        padding-left:20px;
-        color:rgb(114, 98, 98);
-    }
-    #pagename:hover{
-        transform:translateX(20px);
-        transition:1.5s;
-    }
-    #clt1{
-        text-align:center;
-    }
-    #formals{
-        background-color:floralwhite;
-        display:flex;
-    }
-    .formalsim{
-        border-radius:2%;
-        padding:7px;
-        margin:5px;
-    }
-    .formalsim:hover{
-        background-color:silver;
-        border:2px solid black;
-        transition:0.3s;
-    }
-    .c1{
-        height:400px;
-        width:285px;
-    }
-     .buy{
-            padding-inline:118px;
-        }
-        .buy:hover{
-            transform:translateY(1.2);
-            border:2px solid;
-            transition:1.5s;
-        }
-        #clt2{
-            text-align:center;
-        }
-        #casuals{
-            background-color:floralwhite;
-            display:flex;
-        }
-        .casualsim{
-            border-radius:2%;
-            padding:7px;
-            margin:5px;
-        }
-        .casualsim:hover{
-            background-color:silver;
-            border:2px solid black;
-            transition:0.3s;
-        }
-        .c2{
-            height:400px;
-            width:285px;
-        }
-        #clt3{
-            text-align:center;
-        }
-        #hoodies{
-            background-color:floralwhite;
-            display:flex;
-        }
-        .hoodiesim{
-            border-radius:2%;
-            padding:7px;
-            margin:5px;
-        }
-        .hoodiesim:hover{
-            background-color:silver;
-            border:2px solid black;
-            transition:0.3s;
-        }
-        .c3{
-            height:400px;
-            width:285px;
-        }
-        #clt4{
-            text-align:center;
-        }
-        #ts{
-            background-color:floralwhite;
-            display:flex;
-        }
-        .tsim{
-            border-radius:2%;
-            padding:7px;
-            margin:5px;
-        }
-        .tsim:hover{
-            background-color:silver;
-            border:2px solid black;
-            transition:0.3s;
-        }
-        .c4{
-            height:400px;
-            width:285px;
+    <meta name="author" content="Sri Krishna Textiles">
+
+    <style>
+
+        /* ==========================================
+           RESET
+        ========================================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
 
-</style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            width: 100%;
+            min-height: 100vh;
+
+            background-color: white;
+
+            font-family: "Times New Roman", serif;
+
+            overflow-x: hidden;
+        }
+
+
+        /* ==========================================
+           HEADER
+        ========================================== */
+
+        #header {
+            width: 100%;
+
+            min-height: 80px;
+
+            background-color: rgb(229, 229, 194);
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            padding: 15px 20px;
+        }
+
+        #pagename {
+            color: rgb(114, 98, 98);
+
+            font-size: clamp(26px, 4vw, 42px);
+
+            text-align: center;
+
+            transition: 0.5s;
+        }
+
+        #pagename:hover {
+            transform: translateY(-3px);
+        }
+
+
+        /* ==========================================
+           MAIN
+        ========================================== */
+
+        main {
+            width: 100%;
+
+            max-width: 1400px;
+
+            margin: auto;
+
+            padding: 20px;
+        }
+
+
+        /* ==========================================
+           COLLECTION SECTION
+        ========================================== */
+
+        .collection-section {
+            width: 100%;
+
+            margin-bottom: 40px;
+        }
+
+
+        /* ==========================================
+           SECTION TITLE
+        ========================================== */
+
+        .section-title {
+            text-align: center;
+
+            font-size: clamp(24px, 3vw, 32px);
+
+            font-weight: bold;
+
+            margin: 25px 0 12px;
+
+            color: #333;
+        }
+
+        .section-line {
+            width: 100%;
+
+            border: none;
+
+            border-top: 1px solid #999;
+
+            margin-bottom: 25px;
+        }
+
+
+        /* ==========================================
+           PRODUCT GRID
+        ========================================== */
+
+        .product-grid {
+            width: 100%;
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, minmax(0, 1fr));
+
+            gap: 20px;
+
+            align-items: start;
+        }
+
+
+        /* ==========================================
+           PRODUCT CARD
+        ========================================== */
+
+        .product-card {
+            width: 100%;
+
+            background-color: floralwhite;
+
+            border: 1px solid #eeeeee;
+
+            border-radius: 8px;
+
+            padding: 10px;
+
+            display: flex;
+
+            flex-direction: column;
+
+            transition:
+                transform 0.3s ease,
+                box-shadow 0.3s ease,
+                background-color 0.3s ease;
+        }
+
+        .product-card:hover {
+            background-color: #f5f5f5;
+
+            transform: translateY(-5px);
+
+            box-shadow:
+                0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+
+
+        /* ==========================================
+           IMAGE BOX
+
+           Same height for every image.
+
+           object-fit: contain keeps the COMPLETE
+           image visible and prevents cropping.
+        ========================================== */
+
+        .image-box {
+            width: 100%;
+
+            height: 400px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            overflow: hidden;
+
+            background-color: #f5f5f5;
+
+            border-radius: 6px;
+        }
+
+
+        /* ==========================================
+           PRODUCT IMAGE
+        ========================================== */
+
+        .product-card img {
+            width: 100%;
+
+            height: 100%;
+
+            object-fit: contain;
+
+            object-position: center;
+
+            display: block;
+
+            border-radius: 6px;
+        }
+
+
+        /* ==========================================
+           ENQUIRE LINK
+        ========================================== */
+
+        .enquire-link {
+            display: block;
+
+            width: 100%;
+
+            text-decoration: none;
+
+            margin-top: 10px;
+        }
+
+
+        /* ==========================================
+           ENQUIRE BUTTON
+        ========================================== */
+
+        .buy {
+            width: 100%;
+
+            min-height: 45px;
+
+            padding: 10px;
+
+            background-color: white;
+
+            color: #333;
+
+            border: 1px solid #777;
+
+            border-radius: 6px;
+
+            font-family: "Times New Roman", serif;
+
+            font-size: 17px;
+
+            cursor: pointer;
+
+            transition: 0.3s;
+        }
+
+        .buy:hover {
+            background-color: #333;
+
+            color: white;
+
+            border-color: #333;
+
+            transform: translateY(-2px);
+        }
+
+
+        /* ==========================================
+           SMALL LAPTOP
+        ========================================== */
+
+        @media (max-width: 1100px) {
+
+            main {
+                padding: 18px;
+            }
+
+            .product-grid {
+                grid-template-columns:
+                    repeat(3, minmax(0, 1fr));
+
+                gap: 18px;
+            }
+
+            .image-box {
+                height: 380px;
+            }
+        }
+
+
+        /* ==========================================
+           TABLET
+        ========================================== */
+
+        @media (max-width: 800px) {
+
+            #header {
+                min-height: 70px;
+
+                padding: 15px;
+            }
+
+            #pagename {
+                font-size: 32px;
+            }
+
+            main {
+                padding: 15px;
+            }
+
+            .product-grid {
+                grid-template-columns:
+                    repeat(2, minmax(0, 1fr));
+
+                gap: 18px;
+            }
+
+            .section-title {
+                font-size: 27px;
+            }
+
+            .image-box {
+                height: 420px;
+            }
+        }
+
+
+        /* ==========================================
+           MOBILE
+        ========================================== */
+
+        @media (max-width: 600px) {
+
+            #header {
+                width: 100%;
+
+                min-height: 65px;
+
+                padding: 15px 10px;
+            }
+
+            #pagename {
+                font-size: 27px;
+
+                white-space: normal;
+            }
+
+            main {
+                width: 100%;
+
+                padding: 10px;
+            }
+
+            .collection-section {
+                margin-bottom: 30px;
+            }
+
+            .section-title {
+                font-size: 24px;
+
+                margin-top: 20px;
+
+                margin-bottom: 10px;
+            }
+
+            .section-line {
+                margin-bottom: 18px;
+            }
+
+            .product-grid {
+                width: 100%;
+
+                grid-template-columns: 1fr;
+
+                gap: 20px;
+
+                padding: 0;
+            }
+
+            .product-card {
+                width: 100%;
+
+                max-width: 450px;
+
+                margin-left: auto;
+
+                margin-right: auto;
+
+                padding: 10px;
+            }
+
+            .image-box {
+                width: 100%;
+
+                height: 450px;
+            }
+
+            .product-card img {
+                width: 100%;
+
+                height: 100%;
+
+                object-fit: contain;
+
+                object-position: center;
+            }
+
+            .buy {
+                width: 100%;
+
+                min-height: 48px;
+
+                font-size: 18px;
+            }
+        }
+
+
+        /* ==========================================
+           VERY SMALL PHONES
+        ========================================== */
+
+        @media (max-width: 350px) {
+
+            #header {
+                padding: 12px 8px;
+            }
+
+            #pagename {
+                font-size: 23px;
+            }
+
+            main {
+                padding: 7px;
+            }
+
+            .section-title {
+                font-size: 21px;
+            }
+
+            .product-card {
+                padding: 7px;
+            }
+
+            .product-grid {
+                gap: 15px;
+            }
+
+            .image-box {
+                height: 400px;
+            }
+
+            .buy {
+                font-size: 17px;
+            }
+        }
+
+    </style>
+
 </head>
+
+
 <body>
-    <div id="header">
-        <h1 id="pagename">MENS WEAR</h1>
-    </div>
-    <h3 id="clt1"> FORMAL SHIRTS</h3>
-    <hr>
-    <div id="formals">
-        <div class="formalsim">
-            <img class="c1" src="formal short 1.jpg">
-            <a href="https://wa.me/918946099340" target="I visited your page, would like to explore more">
-                    <button class="buy">Enquire</button>
+
+
+    <!-- ==========================================
+         HEADER
+    ========================================== -->
+
+    <header id="header">
+
+        <h1 id="pagename">
+            MENS WEAR
+        </h1>
+
+    </header>
+
+
+    <main>
+
+
+        <!-- ==========================================
+             FORMAL SHIRTS
+        ========================================== -->
+
+        <section class="collection-section">
+
+            <h2 class="section-title">
+                FORMAL SHIRTS
+            </h2>
+
+            <hr class="section-line">
+
+
+            <div class="product-grid">
+
+
+                <!-- FORMAL SHIRT 1 -->
+
+                <div class="product-card">
+
+                    <div class="image-box">
+
+                        <img
+                            src="formal short 1.jpg"
+                            alt="Formal Shirt 1"
+                            loading="lazy"
+                        >
+
+                    </div>
+
+                    <a
+                        class="enquire-link"
+                        href="https://wa.me/918946099340"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+
+                        <button class="buy">
+                            Enquire
+                        </button>
+
                     </a>
-        </div>
-        <div class="formalsim">
-            <img class="c1" src="formal shirt 2.jpg">
-            <a href="https://wa.me/918946099340" target="I visited your page, would like to explore more">
-                    <button class="buy">Enquire</button>
+
+                </div>
+
+
+                <!-- FORMAL SHIRT 2 -->
+
+                <div class="product-card">
+
+                    <div class="image-box">
+
+                        <img
+                            src="formal shirt 2.jpg"
+                            alt="Formal Shirt 2"
+                            loading="lazy"
+                        >
+
+                    </div>
+
+                    <a
+                        class="enquire-link"
+                        href="https://wa.me/918946099340"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+
+                        <button class="buy">
+                            Enquire
+                        </button>
+
                     </a>
-        </div>
-        <div class="formalsim">
-            <img class="c1" src="formal shirt 3.jpg">
-            <a href="https://wa.me/918946099340" target="I visited your page, would like to explore more">
-                    <button class="buy">Enquire</button>
+
+                </div>
+
+
+                <!-- FORMAL SHIRT 3 -->
+
+                <div class="product-card">
+
+                    <div class="image-box">
+
+                        <img
+                            src="formal shirt 3.jpg"
+                            alt="Formal Shirt 3"
+                            loading="lazy"
+                        >
+
+                    </div>
+
+                    <a
+                        class="enquire-link"
+                        href="https://wa.me/918946099340"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+
+                        <button class="buy">
+                            Enquire
+                        </button>
+
                     </a>
-        </div>
-        <div class="formalsim">
-            <img class="c1" src="formal shirt 4.jpg">
-            <a href="https://wa.me/918946099340" target="I visited your page, would like to explore more">
-                    <button class="buy">Enquire</button>
+
+                </div>
+
+
+                <!-- FORMAL SHIRT 4 -->
+
+                <div class="product-card">
+
+                    <div class="image-box">
+
+                        <img
+                            src="formal shirt 4.jpg"
+                            alt="Formal Shirt 4"
+                            loading="lazy"
+                        >
+
+                    </div>
+
+                    <a
+                        class="enquire-link"
+                        href="https://wa.me/918946099340"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+
+                        <button class="buy">
+                            Enquire
+                        </button>
+
                     </a>
-        </div>
-    </div>
-    <br>
-    <hr>
-    <h3 id="clt2">
-        CASUALS
-    </h3>
-    <hr>
-    <div id="casuals">
-        <div class="casualsim">
-            <img class="c2" src="casual 2.jpg">
-            <a href="https://wa.me/918946099340" target="I visited your page, would like to explore more">
-                    <button class="buy">Enquire</button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ==========================================
+             CASUALS
+        ========================================== -->
+
+        <section class="collection-section">
+
+            <h2 class="section-title">
+                CASUALS
+            </h2>
+
+            <hr class="section-line">
+
+
+            <div class="product-grid">
+
+
+                <!-- CASUAL 1 -->
+
+                <div class="product-card">
+
+                    <div class="image-box">
+
+                        <img
+                            src="casual 1.jpg"
+                            alt="Casual Wear 1"
+                            loading="lazy"
+                        >
+
+                    </div>
+
+                    <a
+                        class="enquire-link"
+                        href="https://wa.me/918946099340"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+
+                        <button class="buy">
+                            Enquire
+                        </button>
+
                     </a>
-        </div>
-        <div class="casualsim">
-            <img class="c2" src="casual 3.jpg">
-            <a href="https://wa.me/918946099340" target="I visited your page, would like to explore more">
-                    <button class="buy">Enquire</button>
+
+                </div>
+
+
+                <!-- CASUAL 2 -->
+
+                <div class="product-card">
+
+                    <div class="image-box">
+
+                        <img
+                            src="casual 2.jpg"
+                            alt="Casual Wear 2"
+                            loading="lazy"
+                        >
+
+                    </div>
+
+                    <a
+                        class="enquire-link"
+                        href="https://wa.me/918946099340"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+
+                        <button class="buy">
+                            Enquire
+                        </button>
+
                     </a>
-        </div>
-        <div class="casualsim">
-            <img class="c2" src="casual 4.jpg">
-            <a href="https://wa.me/918946099340" target="I visited your page, would like to explore more">
-                    <button class="buy">Enquire</button>
+
+                </div>
+
+
+                <!-- CASUAL 3 -->
+
+                <div class="product-card">
+
+                    <div class="image-box">
+
+                        <img
+                            src="casual 3.jpg"
+                            alt="Casual Wear 3"
+                            loading="lazy"
+                        >
+
+                    </div>
+
+                    <a
+                        class="enquire-link"
+                        href="https://wa.me/918946099340"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+
+                        <button class="buy">
+                            Enquire
+                        </button>
+
                     </a>
-        </div>
-    </div>
-    <br>
-    <hr>
-    <h3 id="clt3">
-        HOODIES
-    </h3>
-    <hr>
-    <div id="hoodies">
-        <div class="hoodiesim">
-            <img class="c3" src="hoodies 1.jpg">
-            <a href="https://wa.me/918946099340" target="I visited your page, would like to explore more">
-                    <button class="buy">Enquire</button>
+
+                </div>
+
+
+                <!-- CASUAL 4 -->
+
+                <div class="product-card">
+
+                    <div class="image-box">
+
+                        <img
+                            src="casual 4.jpg"
+                            alt="Casual Wear 4"
+                            loading="lazy"
+                        >
+
+                    </div>
+
+                    <a
+                        class="enquire-link"
+                        href="https://wa.me/918946099340"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+
+                        <button class="buy">
+                            Enquire
+                        </button>
+
                     </a>
-        </div>
-        <div class="hoodiesim">
-            <img class="c3" src="hoodies 2.jpg">
-            <a href="https://wa.me/918946099340" target="I visited your page, would like to explore more">
-                    <button class="buy">Enquire</button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ==========================================
+             HOODIES
+        ========================================== -->
+
+        <section class="collection-section">
+
+            <h2 class="section-title">
+                HOODIES
+            </h2>
+
+            <hr class="section-line">
+
+
+            <div class="product-grid">
+
+
+                <!-- HOODIE 1 -->
+
+                <div class="product-card">
+
+                    <div class="image-box">
+
+                        <img
+                            src="hoodies 1.jpg"
+                            alt="Hoodie 1"
+                            loading="lazy"
+                        >
+
+                    </div>
+
+                    <a
+                        class="enquire-link"
+                        href="https://wa.me/918946099340"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+
+                        <button class="buy">
+                            Enquire
+                        </button>
+
                     </a>
-        </div>
-        <div class="hoodiesim">
-            <img class="c3" src="hoodies 3.jpg">
-            <a href="https://wa.me/918946099340" target="I visited your page, would like to explore more">
-                    <button class="buy">Enquire</button>
+
+                </div>
+
+
+                <!-- HOODIE 2 -->
+
+                <div class="product-card">
+
+                    <div class="image-box">
+
+                        <img
+                            src="hoodies 2.jpg"
+                            alt="Hoodie 2"
+                            loading="lazy"
+                        >
+
+                    </div>
+
+                    <a
+                        class="enquire-link"
+                        href="https://wa.me/918946099340"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+
+                        <button class="buy">
+                            Enquire
+                        </button>
+
                     </a>
-        </div>
-        <div class="hoodiesim">
-            <img class="c3" src="hoodies 4.jpg">
-            <a href="https://wa.me/918946099340" target="I visited your page, would like to explore more">
-                    <button class="buy">Enquire</button>
+
+                </div>
+
+
+                <!-- HOODIE 3 -->
+
+                <div class="product-card">
+
+                    <div class="image-box">
+
+                        <img
+                            src="hoodies 3.jpg"
+                            alt="Hoodie 3"
+                            loading="lazy"
+                        >
+
+                    </div>
+
+                    <a
+                        class="enquire-link"
+                        href="https://wa.me/918946099340"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+
+                        <button class="buy">
+                            Enquire
+                        </button>
+
                     </a>
-        </div>
-    </div>
-    <br>
-    <hr>
-    <h3 id="clt4">T-SHIRTS</h3>
-    <hr>
-    <div id="ts">
-        <div class="tsim">
-            <img class="c4" src="tshirt 1.jpg">   
-            <a href="https://wa.me/918946099340" target="I visited your page, would like to explore more">
-                    <button class="buy">Enquire</button>
-                    </a> 
-        </div>
-        <div class="tsim">
-            <img class="c4" src="tshirt 2.jpg">
-            <a href="https://wa.me/918946099340" target="I visited your page, would like to explore more">
-                    <button class="buy">Enquire</button>
+
+                </div>
+
+
+                <!-- HOODIE 4 -->
+
+                <div class="product-card">
+
+                    <div class="image-box">
+
+                        <img
+                            src="hoodies 4.jpg"
+                            alt="Hoodie 4"
+                            loading="lazy"
+                        >
+
+                    </div>
+
+                    <a
+                        class="enquire-link"
+                        href="https://wa.me/918946099340"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+
+                        <button class="buy">
+                            Enquire
+                        </button>
+
                     </a>
-        </div>
-        <div class="tsim">
-            <img class="c4" src="tshirt 3.jpg">
-            <a href="https://wa.me/918946099340" target="I visited your page, would like to explore more">
-                    <button class="buy">Enquire</button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ==========================================
+             T-SHIRTS
+        ========================================== -->
+
+        <section class="collection-section">
+
+            <h2 class="section-title">
+                T-SHIRTS
+            </h2>
+
+            <hr class="section-line">
+
+
+            <div class="product-grid">
+
+
+                <!-- T-SHIRT 1 -->
+
+                <div class="product-card">
+
+                    <div class="image-box">
+
+                        <img
+                            src="tshirt 1.jpg"
+                            alt="T-Shirt 1"
+                            loading="lazy"
+                        >
+
+                    </div>
+
+                    <a
+                        class="enquire-link"
+                        href="https://wa.me/918946099340"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+
+                        <button class="buy">
+                            Enquire
+                        </button>
+
                     </a>
-        </div>
-        <div class="tsim">
-            <img class="c4" src="tshirt 4.jpg">
-            <a href="https://wa.me/918946099340" target="I visited your page, would like to explore more">
-                    <button class="buy">Enquire</button>
+
+                </div>
+
+
+                <!-- T-SHIRT 2 -->
+
+                <div class="product-card">
+
+                    <div class="image-box">
+
+                        <img
+                            src="tshirt 2.jpg"
+                            alt="T-Shirt 2"
+                            loading="lazy"
+                        >
+
+                    </div>
+
+                    <a
+                        class="enquire-link"
+                        href="https://wa.me/918946099340"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+
+                        <button class="buy">
+                            Enquire
+                        </button>
+
                     </a>
-        </div>
-    </div>
+
+                </div>
+
+
+                <!-- T-SHIRT 3 -->
+
+                <div class="product-card">
+
+                    <div class="image-box">
+
+                        <img
+                            src="tshirt 3.jpg"
+                            alt="T-Shirt 3"
+                            loading="lazy"
+                        >
+
+                    </div>
+
+                    <a
+                        class="enquire-link"
+                        href="https://wa.me/918946099340"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+
+                        <button class="buy">
+                            Enquire
+                        </button>
+
+                    </a>
+
+                </div>
+
+
+                <!-- T-SHIRT 4 -->
+
+                <div class="product-card">
+
+                    <div class="image-box">
+
+                        <img
+                            src="tshirt 4.jpg"
+                            alt="T-Shirt 4"
+                            loading="lazy"
+                        >
+
+                    </div>
+
+                    <a
+                        class="enquire-link"
+                        href="https://wa.me/918946099340"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+
+                        <button class="buy">
+                            Enquire
+                        </button>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
 </body>
+
+</html>

@@ -1,271 +1,1031 @@
-<!DOCTYPE Html>
-<html>
-    <head>
-        <title>Traditional wears</title>
-    </head>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
     <meta charset="UTF-8">
 
-<!-- SEO-related -->
-<meta name="description" content="Learn HTML Meta Tags and their importance">
-<meta name="keywords" content="HTML, Meta Tags, SEO, Web Development">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- Author -->
-<meta name="author" content="John Doe">
+    <title>Traditional Wear | Sri Krishna Textiles</title>
 
-<!-- Responsive design -->
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Explore traditional wear including sarees, half sarees, Anarkali dresses and kurtis at Sri Krishna Textiles.">
 
-<!-- Auto-refresh every 10 seconds -->
-<meta http-equiv="refresh" content="10">
+    <meta name="keywords"
+        content="Sri Krishna Textiles, traditional wear, sarees, half sarees, Anarkali, kurtis">
 
-<!-- Open Graph for social media -->
-<meta property="og:title" content="HTML Meta Tags Guide">
-<meta property="og:description" content="A complete guide to HTML meta tags for SEO and social sharing">
-<meta property="og:image" content="https://example.com/image.jpg">
-<meta property="og:url" content="https://example.com/meta-tags-guide">
+    <meta name="author"
+        content="Sri Krishna Textiles">
+
     <style>
-        #header{
-            background-color:rgb(229, 229, 194);
-            display:flex;
+
+        /* ==========================================
+           RESET
+        ========================================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
-        .pagename{
-            color:rgb(114, 98, 98);
-            padding-left:20px;
-            padding-top:20px;
-            padding-bottom:20px;
-            font-family:Times New Roman;
+
+        html {
+            scroll-behavior: smooth;
         }
-        .pagename:hover{
-            transform:translateX(20px);
-            transition:1.5s;
+
+        body {
+            width: 100%;
+            min-height: 100vh;
+
+            background-color: white;
+
+            font-family: "Times New Roman", serif;
+
+            overflow-x: hidden;
         }
-        #clt1{
-            text-align:center;
-            font-family:Times New Roman;
+
+
+        /* ==========================================
+           HEADER
+        ========================================== */
+
+        #header {
+
+            width: 100%;
+
+            min-height: 80px;
+
+            background-color: rgb(229, 229, 194);
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            padding: 15px 20px;
         }
-        #sarees{
-            display:flex;
-            background-color:floralwhite;
-            align-items:center;
+
+
+        .pagename {
+
+            color: rgb(114, 98, 98);
+
+            font-size: clamp(26px, 4vw, 42px);
+
+            text-align: center;
+
+            transition: 0.5s;
         }
-        .sareesim{
-            border-radius:2%;
-            padding:7px;
-            margin:5px;
+
+
+        .pagename:hover {
+
+            transform: translateY(-3px);
         }
-        .sareesim:hover{
-            background-color:silver;
-            border:2px solid black;
-            transition:0.3s;
+
+
+        /* ==========================================
+           COLLECTION SECTION
+        ========================================== */
+
+        .collection-section {
+
+            width: 100%;
+
+            padding: 0 20px;
+
+            margin-bottom: 35px;
         }
-        .c1{
-            height:400px;
-            width:285px;
+
+
+        /* ==========================================
+           SECTION TITLE
+        ========================================== */
+
+        .section-title {
+
+            text-align: center;
+
+            font-size: clamp(24px, 3vw, 32px);
+
+            font-weight: bold;
+
+            color: #333;
+
+            margin: 25px 0 12px;
         }
-        #clt2{
-            text-align:center;
-            font-family:Times New Roman;
+
+
+        .section-line {
+
+            width: 100%;
+
+            border: none;
+
+            border-top: 1px solid #999;
+
+            margin-bottom: 25px;
         }
-        #hal{
-            display:flex;
-            align-items:center;
-            background-color:floralwhite;
+
+
+        /* ==========================================
+           PRODUCT GRID
+        ========================================== */
+
+        .product-grid {
+
+            width: 100%;
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, minmax(0, 1fr));
+
+            gap: 20px;
+
+            align-items: start;
         }
-        .halim{
-            border-radius:2%;
-            padding:7px;
-            margin:5px;
+
+
+        /* ==========================================
+           PRODUCT CARD
+        ========================================== */
+
+        .product-card {
+
+            width: 100%;
+
+            background-color: floralwhite;
+
+            border: 1px solid #eeeeee;
+
+            border-radius: 8px;
+
+            padding: 10px;
+
+            display: flex;
+
+            flex-direction: column;
+
+            transition:
+                transform 0.3s ease,
+                box-shadow 0.3s ease,
+                background-color 0.3s ease;
         }
-        .halim:hover{
-            background-color:silver;
-            border:2px solid black;
-            transition:0.3s;
+
+
+        .product-card:hover {
+
+            background-color: #f5f5f5;
+
+            transform: translateY(-5px);
+
+            box-shadow:
+                0 8px 20px rgba(0, 0, 0, 0.15);
         }
-        .c2{
-            height:400px;
-            width:285px;
+
+
+        /* ==========================================
+           PRODUCT IMAGES
+           
+           Fixed image area.
+           object-fit: contain prevents cropping.
+        ========================================== */
+
+        .product-card img {
+
+            width: 100%;
+
+            height: 500px;
+
+            max-width: 100%;
+
+            display: block;
+
+            object-fit: contain;
+
+            border-radius: 6px;
+
+            background-color: #f5f5f5;
         }
-        .buy{
-            padding-inline:118px;
+
+
+        /* ==========================================
+           ENQUIRE LINK
+        ========================================== */
+
+        .enquire-link {
+
+            display: block;
+
+            width: 100%;
+
+            margin-top: 10px;
+
+            text-decoration: none;
         }
-        .buy:hover{
-            transform:translateY(1.2);
-            border:2px solid;
-            transition:1.5s;
-            
+
+
+        /* ==========================================
+           ENQUIRE BUTTON
+        ========================================== */
+
+        .buy {
+
+            width: 100%;
+
+            min-height: 45px;
+
+            padding: 10px;
+
+            background-color: white;
+
+            color: #333;
+
+            border: 1px solid #777;
+
+            border-radius: 6px;
+
+            font-family: "Times New Roman", serif;
+
+            font-size: 17px;
+
+            cursor: pointer;
+
+            transition: 0.3s;
         }
-        #clt3{
-            text-align:center;
-            font-family:Times New Roman;
+
+
+        .buy:hover {
+
+            background-color: #333;
+
+            color: white;
+
+            border-color: #333;
+
+            transform: translateY(-2px);
         }
-        #anarkali{
-            background-color:floralwhite;
-            display:flex;
+
+
+        /* ==========================================
+           SMALL LAPTOP
+        ========================================== */
+
+        @media (max-width: 1100px) {
+
+            .product-grid {
+
+                grid-template-columns:
+                    repeat(3, minmax(0, 1fr));
+
+                gap: 18px;
+            }
+
+
+            .collection-section {
+
+                padding: 0 18px;
+            }
+
+
+            .product-card img {
+
+                height: 430px;
+            }
         }
-        .anarkaliim{
-            border-radius:2px;
-            padding:7px;
-            margin:5px;
+
+
+        /* ==========================================
+           TABLET
+        ========================================== */
+
+        @media (max-width: 800px) {
+
+            #header {
+
+                min-height: 70px;
+
+                padding: 15px;
+            }
+
+
+            .pagename {
+
+                font-size: 32px;
+            }
+
+
+            .collection-section {
+
+                padding: 0 15px;
+            }
+
+
+            .product-grid {
+
+                grid-template-columns:
+                    repeat(2, minmax(0, 1fr));
+
+                gap: 18px;
+            }
+
+
+            .section-title {
+
+                font-size: 27px;
+            }
+
+
+            .product-card img {
+
+                height: 400px;
+            }
         }
-        .anarkaliim:hover{
-            background-color:silver;
-            border:2px solid black;
-            transition:0.3s;
+
+
+        /* ==========================================
+           MOBILE
+        ========================================== */
+
+        @media (max-width: 600px) {
+
+            #header {
+
+                width: 100%;
+
+                min-height: 65px;
+
+                padding: 15px 10px;
+            }
+
+
+            .pagename {
+
+                font-size: 27px;
+
+                white-space: normal;
+            }
+
+
+            .collection-section {
+
+                width: 100%;
+
+                padding: 0 10px;
+
+                margin-bottom: 25px;
+            }
+
+
+            .section-title {
+
+                font-size: 24px;
+
+                margin-top: 20px;
+
+                margin-bottom: 10px;
+            }
+
+
+            .section-line {
+
+                margin-bottom: 18px;
+            }
+
+
+            .product-grid {
+
+                width: 100%;
+
+                grid-template-columns: 1fr;
+
+                gap: 20px;
+
+                padding: 0;
+            }
+
+
+            .product-card {
+
+                width: 100%;
+
+                max-width: 450px;
+
+                margin-left: auto;
+
+                margin-right: auto;
+
+                padding: 10px;
+            }
+
+
+            .product-card img {
+
+                width: 100%;
+
+                height: 450px;
+
+                max-width: 100%;
+
+                object-fit: contain;
+
+                display: block;
+            }
+
+
+            .buy {
+
+                width: 100%;
+
+                min-height: 48px;
+
+                font-size: 18px;
+            }
         }
-        .c3{
-            height:400px;
-            width:285px;
-            border-radius:2px;
-        }
-        #clt4{
-            text-align:center;
-        }
-        #kurtis{
-            display:flex;
-            background-color:floralwhite;
-        }
-        .kurtisim{
-            border-radius:2%;
-            padding:7px;
-            margin:5px;
-        }
-        .kurtisim:hover{
-            background-color:silver;
-            border:2px solid black;
-            transition:0.3px;
-        }
-        .c4{
-            height:400px;
-            width:285px;
+
+
+        /* ==========================================
+           VERY SMALL PHONES
+        ========================================== */
+
+        @media (max-width: 350px) {
+
+            #header {
+
+                padding: 12px 8px;
+            }
+
+
+            .pagename {
+
+                font-size: 23px;
+            }
+
+
+            .collection-section {
+
+                padding: 0 7px;
+            }
+
+
+            .section-title {
+
+                font-size: 21px;
+            }
+
+
+            .product-card {
+
+                padding: 7px;
+            }
+
+
+            .product-grid {
+
+                gap: 15px;
+            }
+
+
+            .product-card img {
+
+                height: 400px;
+            }
+
+
+            .buy {
+
+                font-size: 17px;
+            }
         }
 
     </style>
-    <body>
-        <div id="header">
-            <h1 class="pagename">TRADITIONAL WEAR</h1>
+
+</head>
+
+
+<body>
+
+
+    <!-- ==========================================
+         HEADER
+    ========================================== -->
+
+    <header id="header">
+
+        <h1 class="pagename">
+            TRADITIONAL WEAR
+        </h1>
+
+    </header>
+
+
+
+    <!-- ==========================================
+         SAREES
+    ========================================== -->
+
+    <section class="collection-section">
+
+        <h2 class="section-title">
+            SAREES
+        </h2>
+
+        <hr class="section-line">
+
+
+        <div class="product-grid">
+
+
+            <!-- SAREE 1 -->
+
+            <div class="product-card">
+
+                <img
+                    src="trad 1.jpg"
+                    alt="Traditional Saree 1"
+                    loading="lazy"
+                >
+
+                <a
+                    class="enquire-link"
+                    href="https://wa.me/918946099340"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+
+                    <button class="buy">
+                        Enquire
+                    </button>
+
+                </a>
+
+            </div>
+
+
+            <!-- SAREE 2 -->
+
+            <div class="product-card">
+
+                <img
+                    src="trad 2.jpg"
+                    alt="Traditional Saree 2"
+                    loading="lazy"
+                >
+
+                <a
+                    class="enquire-link"
+                    href="https://wa.me/918946099340"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+
+                    <button class="buy">
+                        Enquire
+                    </button>
+
+                </a>
+
+            </div>
+
+
+            <!-- SAREE 3 -->
+
+            <div class="product-card">
+
+                <img
+                    src="trad 3.jpg"
+                    alt="Traditional Saree 3"
+                    loading="lazy"
+                >
+
+                <a
+                    class="enquire-link"
+                    href="https://wa.me/918946099340"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+
+                    <button class="buy">
+                        Enquire
+                    </button>
+
+                </a>
+
+            </div>
+
+
+            <!-- SAREE 4 -->
+
+            <div class="product-card">
+
+                <img
+                    src="trad 4.jpg"
+                    alt="Traditional Saree 4"
+                    loading="lazy"
+                >
+
+                <a
+                    class="enquire-link"
+                    href="https://wa.me/918946099340"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+
+                    <button class="buy">
+                        Enquire
+                    </button>
+
+                </a>
+
+            </div>
+
+
         </div>
-        <h3 id="clt1">SAREES
-        </h3>
-        <hr>
-        <div id="sarees">
-            <div class="sareesim">
-                <img class="c1" src= "trad 1.jpg">
-                <a href="https://wa.me/918946099340" target="I visited your page, would like to explore more">
-                    <button class="buy">Enquire</button>
-                    </a>
+
+    </section>
+
+
+
+    <!-- ==========================================
+         HALF SAREES
+    ========================================== -->
+
+    <section class="collection-section">
+
+        <h2 class="section-title">
+            HALF SAREES
+        </h2>
+
+        <hr class="section-line">
+
+
+        <div class="product-grid">
+
+
+            <!-- HALF SAREE 1 -->
+
+            <div class="product-card">
+
+                <img
+                    src="half sarees 1.jpg"
+                    alt="Half Saree 1"
+                    loading="lazy"
+                >
+
+                <a
+                    class="enquire-link"
+                    href="https://wa.me/918946099340"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+
+                    <button class="buy">
+                        Enquire
+                    </button>
+
+                </a>
+
             </div>
-            <div class="sareesim">
-                <img class="c1" src="trad 2.jpg">
-                <a href="https://wa.me/918946099340" target="I visited your page, would like to explore more">
-                    <button class="buy">Enquire</button>
-                    </a>
+
+
+            <!-- HALF SAREE 2 -->
+
+            <div class="product-card">
+
+                <img
+                    src="half sarees 2.jpg"
+                    alt="Half Saree 2"
+                    loading="lazy"
+                >
+
+                <a
+                    class="enquire-link"
+                    href="https://wa.me/918946099340"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+
+                    <button class="buy">
+                        Enquire
+                    </button>
+
+                </a>
+
             </div>
-            <div class="sareesim">
-                <img class="c1" src="trad 3.jpg">
-                <a href="https://wa.me/918946099340" target="I visited your page, would like to explore more">
-                    <button class="buy">Enquire</button>
-                    </a>
+
+
+            <!-- HALF SAREE 3 -->
+
+            <div class="product-card">
+
+                <img
+                    src="half sarees 3.jpg"
+                    alt="Half Saree 3"
+                    loading="lazy"
+                >
+
+                <a
+                    class="enquire-link"
+                    href="https://wa.me/918946099340"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+
+                    <button class="buy">
+                        Enquire
+                    </button>
+
+                </a>
+
             </div>
-            <div class="sareesim">
-                <img class="c1" src="trad 4.jpg">
-                <a href="https://wa.me/918946099340" target="I visited your page, would like to explore more">
-                    <button class="buy">Enquire</button>
-                    </a>
+
+
+            <!-- HALF SAREE 4 -->
+
+            <div class="product-card">
+
+                <img
+                    src="half sarees.jpg"
+                    alt="Half Saree 4"
+                    loading="lazy"
+                >
+
+                <a
+                    class="enquire-link"
+                    href="https://wa.me/918946099340"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+
+                    <button class="buy">
+                        Enquire
+                    </button>
+
+                </a>
+
             </div>
+
+
         </div>
-        <br>
-        <hr>
-        <h3 id="clt2">HALF SAREES</h3>
-        <hr>
-        <div id="hal">
-            <div class="halim">
-                <img class="c2" src="half sarees 1.jpg">
-                <a href="https://wa.me/918946099340" target="I visited your page, would like to explore more">
-                    <button class="buy">Enquire</button>
-                    </a>
-            </div>
-            <div class="halim">
-                <img class="c2" src="half sarees 2.jpg">
-                <a href="https://wa.me/918946099340" target="I visited your page, would like to explore more">
-                    <button class="buy">Enquire</button>
-                    </a>
-            </div>
-            <div class="halim">
-                <img class="c2" src="half sarees 3.jpg">
-                <a href="https://wa.me/918946099340" target="I visited your page, would like to explore more">
-                    <button class="buy">Enquire</button>
-                    </a>
-            </div>
-            <div class="halim">
-                <img class="c2" src="half sarees.jpg">
-                <a href="https://wa.me/918946099340" target="I visited your page, would like to explore more">
-                    <button class="buy">Enquire</button>
-                    </a>
-            </div>
-        </div>
-        <br>
-        <hr>
-        <h3 id="clt3">
+
+    </section>
+
+
+
+    <!-- ==========================================
+         ANARKALI
+    ========================================== -->
+
+    <section class="collection-section">
+
+        <h2 class="section-title">
             ANARKALI
-        </h3>
-        <hr>
-        <div id="anarkali">
-            <div class="anarkaliim">
-                <img class="c3" src="anarkali 1.jpg">
-                <a href="https://wa.me/918946099340" target="I visited your page, would like to explore more">
-                    <button class="buy">Enquire</button>
-                    </a>
+        </h2>
+
+        <hr class="section-line">
+
+
+        <div class="product-grid">
+
+
+            <!-- ANARKALI 1 -->
+
+            <div class="product-card">
+
+                <img
+                    src="anarkali 1.jpg"
+                    alt="Anarkali 1"
+                    loading="lazy"
+                >
+
+                <a
+                    class="enquire-link"
+                    href="https://wa.me/918946099340"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+
+                    <button class="buy">
+                        Enquire
+                    </button>
+
+                </a>
+
             </div>
-            <div class="anarkaliim">
-                <img class="c3" src="anarkali 2.jpg">
-                <a href="https://wa.me/918946099340" target="I visited your page, would like to explore more">
-                    <button class="buy">Enquire</button>
-                    </a>
+
+
+            <!-- ANARKALI 2 -->
+
+            <div class="product-card">
+
+                <img
+                    src="anarkali 2.jpg"
+                    alt="Anarkali 2"
+                    loading="lazy"
+                >
+
+                <a
+                    class="enquire-link"
+                    href="https://wa.me/918946099340"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+
+                    <button class="buy">
+                        Enquire
+                    </button>
+
+                </a>
+
             </div>
-            <div class="anarkaliim">
-                <img class="c3" src="anarkali 3.jpg">
-                <a href="https://wa.me/918946099340" target="I visited your page, would like to explore more">
-                    <button class="buy">Enquire</button>
-                    </a>
+
+
+            <!-- ANARKALI 3 -->
+
+            <div class="product-card">
+
+                <img
+                    src="anarkali 3.jpg"
+                    alt="Anarkali 3"
+                    loading="lazy"
+                >
+
+                <a
+                    class="enquire-link"
+                    href="https://wa.me/918946099340"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+
+                    <button class="buy">
+                        Enquire
+                    </button>
+
+                </a>
+
             </div>
-            <div class="anarkaliim">
-                <img class="c3" src="anarkali 4.jpg">
-                <a href="https://wa.me/918946099340" target="I visited your page, would like to explore more">
-                    <button class="buy">Enquire</button>
-                    </a>
+
+
+            <!-- ANARKALI 4 -->
+
+            <div class="product-card">
+
+                <img
+                    src="anarkali 4.jpg"
+                    alt="Anarkali 4"
+                    loading="lazy"
+                >
+
+                <a
+                    class="enquire-link"
+                    href="https://wa.me/918946099340"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+
+                    <button class="buy">
+                        Enquire
+                    </button>
+
+                </a>
+
             </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ==========================================
+         KURTIS
+    ========================================== -->
+
+    <section class="collection-section">
+
+        <h2 class="section-title">
+            KURTIS
+        </h2>
+
+        <hr class="section-line">
+
+
+        <div class="product-grid">
+
+
+            <!-- KURTI 1 -->
+
+            <div class="product-card">
+
+                <img
+                    src="kurti 1.jpg"
+                    alt="Kurti 1"
+                    loading="lazy"
+                >
+
+                <a
+                    class="enquire-link"
+                    href="https://wa.me/918946099340"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+
+                    <button class="buy">
+                        Enquire
+                    </button>
+
+                </a>
+
             </div>
-            <br>
-            <hr>
-            <h3 id="clt4">KURTIS</h3>
-            <hr>
-            <div id="kurtis">
-                <a href="TRADITIONAL WEAR WOMEN.HTML">
-                <div class="kurtisim">
-                    <img class="c4" src="kurti 1.jpg">
-                     <a href="https://wa.me/918946099340" target="I visited your page, would like to explore more">
-                    <button class="buy">Enquire</button>
-                    </a>
-                </div>
-                <div class="kurtisim">
-                    <img class="c4" src="kurti 2.jpg">
-                     <a href="https://wa.me/918946099340" target="I visited your page, would like to explore more">
-                    <button class="buy">Enquire</button>
-                    </a>
-                </div>
-                <div class="kurtisim">
-                    <img class="c4" src="kurti 3.jpg">
-                     <a href="https://wa.me/918946099340" target="I visited your page, would like to explore more">
-                    <button class="buy">Enquire</button>
-                    </a>
-                </div>
-                <div class="kurtisim">
-                    <img class="c4" src="kurti 4.jpg">
-                     <a href="https://wa.me/918946099340" target="I visited your page, would like to explore more">
-                    <button class="buy">Enquire</button>
-                    </a>
-                </div>
-            </a>
+
+
+            <!-- KURTI 2 -->
+
+            <div class="product-card">
+
+                <img
+                    src="kurti 2.jpg"
+                    alt="Kurti 2"
+                    loading="lazy"
+                >
+
+                <a
+                    class="enquire-link"
+                    href="https://wa.me/918946099340"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+
+                    <button class="buy">
+                        Enquire
+                    </button>
+
+                </a>
+
             </div>
-    </body>
+
+
+            <!-- KURTI 3 -->
+
+            <div class="product-card">
+
+                <img
+                    src="kurti 3.jpg"
+                    alt="Kurti 3"
+                    loading="lazy"
+                >
+
+                <a
+                    class="enquire-link"
+                    href="https://wa.me/918946099340"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+
+                    <button class="buy">
+                        Enquire
+                    </button>
+
+                </a>
+
+            </div>
+
+
+            <!-- KURTI 4 -->
+
+            <div class="product-card">
+
+                <img
+                    src="kurti 4.jpg"
+                    alt="Kurti 4"
+                    loading="lazy"
+                >
+
+                <a
+                    class="enquire-link"
+                    href="https://wa.me/918946099340"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+
+                    <button class="buy">
+                        Enquire
+                    </button>
+
+                </a>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+</body>
+
 </html>
